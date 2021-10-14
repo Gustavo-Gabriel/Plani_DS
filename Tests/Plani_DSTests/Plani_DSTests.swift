@@ -1,11 +1,22 @@
-    import XCTest
-    @testable import Plani_DS
+import Quick
+import Nimble
+    
+@testable import Plani_DS
 
-    final class Plani_DSTests: XCTestCase {
-        func testExample() {
-            // This is an example of a functional test case.
-            // Use XCTAssert and related functions to verify your tests produce the correct
-            // results.
-            XCTAssertEqual(Plani_DS().text, "Hello, World!")
+final class Plani_DSTests: QuickSpec {
+    override func spec() {
+        var sut: Plani_DS!
+        
+        beforeEach {
+            sut = Plani_DS()
+        }
+        
+        describe("initial test case") {
+            context("hello world") {
+                it("plani_DS text is hello world") {
+                    expect(sut.text).to(equal("Hello, World!"))
+                }
+            }
         }
     }
+}
