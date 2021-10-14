@@ -1,3 +1,5 @@
+import SwiftUI
+
 public enum Spacing {
 
     /// Returns value = 5
