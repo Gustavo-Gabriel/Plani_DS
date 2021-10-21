@@ -5,11 +5,26 @@ import SwiftUI
 
 @available(iOS 13, *)
 final class ColorsTests: XCTestCase {
-    func testTokenColorsLightValue() {
-        XCTAssertEqual(Colors.blue100, Color(UIColor(named: "blue100")!))
-        XCTAssertEqual(Colors.blue200, Color(Colors.colorOfDefault("blue200")))
-        XCTAssertEqual(Colors.blue300, Color(Colors.colorOfDefault("blue300")))
-        XCTAssertEqual(Colors.blue400, Color(Colors.colorOfDefault("blue400")))
-        XCTAssertEqual(Colors.black, Color(Colors.colorOfDefault("black")))
+    func testTokenColorsNotNil() {
+        XCTAssertNotNil(Colors.blue100)
+        XCTAssertNotNil(Colors.blue200)
+        XCTAssertNotNil(Colors.blue300)
+        XCTAssertNotNil(Colors.blue400)
+        
+        XCTAssertNotNil(Colors.purple200)
+        XCTAssertNotNil(Colors.purple300)
+        
+        XCTAssertNotNil(Colors.orange100)
+        XCTAssertNotNil(Colors.orange300)
+        
+        XCTAssertNotNil(Colors.gray100)
+        XCTAssertNotNil(Colors.gray200)
+        XCTAssertNotNil(Colors.gray300)
+        XCTAssertNotNil(Colors.gray400)
+        XCTAssertNotNil(Colors.gray500)
+        XCTAssertNotNil(Colors.gray600)
+        
+        XCTAssertNotNil(Colors.black)
+        XCTAssertNotNil(Colors.white)
     }
 }
