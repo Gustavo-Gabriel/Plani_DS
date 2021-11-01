@@ -5,7 +5,7 @@ public struct AddCard: View {
     var title: String
     var icon: String
     
-    init(title: String, icon: String) {
+    public init(title: String, icon: String) {
         self.title = title
         self.icon = icon
     }
