@@ -28,6 +28,7 @@ public struct OverlayWarning: View {
                     .font(.system(size: 12))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 32)
