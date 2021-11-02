@@ -21,6 +21,7 @@ public struct OverlayDefault: View {
                     .font(.system(size: 14).bold())
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 32)
