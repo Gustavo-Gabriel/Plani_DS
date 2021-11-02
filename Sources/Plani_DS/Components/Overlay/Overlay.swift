@@ -2,8 +2,8 @@ import UIKit
 import SwiftUI
 
 public enum OverlayType {
-    case defaultOverlay(String, String)
-    case warning(String, String, String)
+    case defaultOverlay(title: String, icon: String)
+    case warning(title: String, subtitle: String, icon: String)
 }
 
 @available(iOS 13.0, *)
