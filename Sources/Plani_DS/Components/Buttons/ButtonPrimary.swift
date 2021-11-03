@@ -17,18 +17,20 @@ public struct ButtonPrimary: View {
             Button(action: action, label: {
                 VStack {
                     HStack {
-                        Image(icon)
-                            .foregroundColor(Colors.orange300)
-                            .padding(.bottom, Spacing.medium)
-                
+                        if icon != ""{
+                            Image(systemName: icon)
+                                .foregroundColor(.white)
+                                .frame(width: 20, height: 20, alignment: .center)
+                                .padding(.vertical, 10)
+                        }
+
                         Text(title)
                             .font(.system(size: 18))
                             .foregroundColor(.white)
+                            .padding(.vertical, 8)
                     }
-                    .padding(.horizontal, Spacing.medium)
-                    .padding(.vertical, 8)
                 }
-                .frame(minWidth: geometry.size.width, idealHeight: 40, alignment: .center)
+                .frame(minWidth: geometry.size.width, maxHeight: 40, alignment: .center)
                 .background(Colors.purple300)
                 .cornerRadius(Radius.large)
             })
