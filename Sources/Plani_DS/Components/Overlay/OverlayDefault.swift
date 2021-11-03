@@ -5,6 +5,8 @@ public struct OverlayDefault: View {
     var title: String
     var icon: String
 
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+
     public init(title: String, icon: String) {
         self.title = title
         self.icon = icon
@@ -14,12 +16,12 @@ public struct OverlayDefault: View {
         VStack {
             VStack {
                 Image(icon)
-                    .foregroundColor(Colors.orange300)
+                    .foregroundColor(colorScheme == .light ? Colors.purple300 : Colors.orange300)
                     .padding(.bottom, Spacing.medium)
         
                 Text(title)
                     .font(.system(size: 14).bold())
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .light ? Colors.blue400 : .white)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -27,7 +29,7 @@ public struct OverlayDefault: View {
             .padding(.vertical, 32)
         }
         .frame(width: 207, height: 164)
-        .background(Colors.blue300)
+        .background(colorScheme == .light ? .white: Colors.blue300)
         .cornerRadius(Radius.medium)
     }
 }
