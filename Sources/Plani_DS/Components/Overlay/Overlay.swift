@@ -6,7 +6,7 @@ public enum OverlayType {
     case warning(title: String, subtitle: String, icon: String)
 }
 
-@available(iOS 13.0, *)
+@available(iOS 14.0, *)
 public class Overlay {
     public static func getView (type: OverlayType) -> AnyView {
         switch type {

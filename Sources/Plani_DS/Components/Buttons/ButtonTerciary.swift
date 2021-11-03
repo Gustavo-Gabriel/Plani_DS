@@ -5,7 +5,7 @@ public enum ButtonTerciaryType {
     case link
 }
 
-@available(iOS 13.0, *)
+@available(iOS 14.0, *)
 public struct ButtonTerciary: View {
     var title: String
     var icon: String
